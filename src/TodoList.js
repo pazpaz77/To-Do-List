@@ -1,4 +1,6 @@
 import React from 'react';
+import './TodoList.css';
+import { Form } from 'react-bootstrap';
 
 
 class TodoList extends React.Component {
@@ -6,8 +8,8 @@ class TodoList extends React.Component {
     super(props);
 
     this.state = {
-    id:' ',
-    itemName: ' ',
+    id:'',
+    itemName: '',
     completed: false,
     };
 
@@ -15,9 +17,17 @@ class TodoList extends React.Component {
 
     render() {
         
+
         return (
            
-          <div></div>
+          <div className="main-list">
+              <Form>
+                 <Form.Control 
+                    type="text" 
+                    placeholder="What's Next?"
+                    value={this.state.itemName} onChange/>
+              </Form>
+          </div>
        
             
         )
